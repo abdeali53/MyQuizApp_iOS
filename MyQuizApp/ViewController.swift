@@ -15,9 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var swRemember: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let login = LoginViewModel()
-        swRemember.isOn = login.isRememberCredential()
-        // Do any additional setup after loading the view, typically from a nib.
+        var login = LoginViewModel()
+        swRemember.isOn = login.checkIsRememberCredential()
+        if swRemember.isOn == true {
+           login = login.loadLoginCredential(isRemember: true)
+            txtUsername.text = login.username
+            txtPassword.text = login.password
+        }
+        else{
+            login = login.loadLoginCredential(isRemember: false)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,17 +35,21 @@ class ViewController: UIViewController {
 
     @IBAction func btnLogin(_ sender: UIButton) {
         if(txtUsername.text != "" && txtPassword.text != ""){
-            var login = LoginViewModel(username: txtUsername.text!, password: txtPassword.text!)
+            var login = LoginViewModel(username: txtUsername.text!, password: txtPassword.text!, isRememberCredential: swRemember.isOn)
             if(login.authenticate(loginInfo: login))
             {
-                print("Login Successfully")
+                if swRemember.isOn{
+                    login.addCredentials(loginInfo: login)
+                }
+                else{
+                    login.removeCredentials(loginInfo: login)
+                }
             }
             else{
-                print("login unsuccessfully")
+                let alert = UIAlertController(title: "Error Message", message: "Username or Password incorrect", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
-        
     }
-    
 }
-

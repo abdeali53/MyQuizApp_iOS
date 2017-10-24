@@ -17,7 +17,7 @@ protocol ILogin
 }
 extension ILogin {
   mutating  func authenticate(loginInfo : ILogin) -> Bool {
-        if (loginInfo.username == "admin" && loginInfo.password == "admin"){
+        if (loginInfo.username == "admin" && loginInfo.password == "admin@123"){
             return true
         }
         else{
