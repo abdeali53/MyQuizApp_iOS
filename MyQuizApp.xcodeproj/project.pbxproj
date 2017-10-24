@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031BBEC71F9F749800736CFE /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031BBEC61F9F749800736CFE /* InstructionViewController.swift */; };
+		035718C61F9FAD9B0010CE36 /* QuizData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 035718C51F9FAD9B0010CE36 /* QuizData.plist */; };
+		035718C81F9FB32F0010CE36 /* QuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035718C71F9FB32F0010CE36 /* QuestionnaireViewModel.swift */; };
 		03BF35D51F9E411300133674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35D41F9E411300133674 /* AppDelegate.swift */; };
-		03BF35D71F9E411300133674 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35D61F9E411300133674 /* ViewController.swift */; };
+		03BF35D71F9E411300133674 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35D61F9E411300133674 /* LoginViewController.swift */; };
 		03BF35DA1F9E411300133674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BF35D81F9E411300133674 /* Main.storyboard */; };
 		03BF35DC1F9E411300133674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BF35DB1F9E411300133674 /* Assets.xcassets */; };
 		03BF35DF1F9E411300133674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BF35DD1F9E411300133674 /* LaunchScreen.storyboard */; };
 		03BF35EB1F9E5CB600133674 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */; };
 		03BF35ED1F9E615A00133674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35EC1F9E615A00133674 /* LoginViewModel.swift */; };
-		03E5C8DA1F9E6F7600EA3A96 /* QuizInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E5C8D91F9E6F7600EA3A96 /* QuizInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031BBEC61F9F749800736CFE /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
+		035718C51F9FAD9B0010CE36 /* QuizData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = QuizData.plist; sourceTree = "<group>"; };
+		035718C71F9FB32F0010CE36 /* QuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewModel.swift; sourceTree = "<group>"; };
 		03BF35D11F9E411300133674 /* MyQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BF35D41F9E411300133674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03BF35D61F9E411300133674 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03BF35D61F9E411300133674 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		03BF35D91F9E411300133674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03BF35DB1F9E411300133674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BF35DE1F9E411300133674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03BF35E01F9E411300133674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		03BF35EC1F9E615A00133674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		03E5C8D91F9E6F7600EA3A96 /* QuizInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = QuizInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +64,16 @@
 		03BF35D31F9E411300133674 /* MyQuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				03E5C8D91F9E6F7600EA3A96 /* QuizInfo.plist */,
 				03BF35E81F9E5C6900133674 /* Protocol */,
 				03BF35E61F9E5C3500133674 /* Model */,
 				03BF35D41F9E411300133674 /* AppDelegate.swift */,
-				03BF35D61F9E411300133674 /* ViewController.swift */,
+				03BF35D61F9E411300133674 /* LoginViewController.swift */,
 				03BF35D81F9E411300133674 /* Main.storyboard */,
 				03BF35DB1F9E411300133674 /* Assets.xcassets */,
 				03BF35DD1F9E411300133674 /* LaunchScreen.storyboard */,
 				03BF35E01F9E411300133674 /* Info.plist */,
+				031BBEC61F9F749800736CFE /* InstructionViewController.swift */,
+				035718C51F9FAD9B0010CE36 /* QuizData.plist */,
 			);
 			path = MyQuizApp;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				03BF35EC1F9E615A00133674 /* LoginViewModel.swift */,
+				035718C71F9FB32F0010CE36 /* QuestionnaireViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,9 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BF35DF1F9E411300133674 /* LaunchScreen.storyboard in Resources */,
-				03E5C8DA1F9E6F7600EA3A96 /* QuizInfo.plist in Resources */,
 				03BF35DC1F9E411300133674 /* Assets.xcassets in Resources */,
 				03BF35DA1F9E411300133674 /* Main.storyboard in Resources */,
+				035718C61F9FAD9B0010CE36 /* QuizData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035718C81F9FB32F0010CE36 /* QuestionnaireViewModel.swift in Sources */,
+				031BBEC71F9F749800736CFE /* InstructionViewController.swift in Sources */,
 				03BF35ED1F9E615A00133674 /* LoginViewModel.swift in Sources */,
 				03BF35EB1F9E5CB600133674 /* LoginProtocol.swift in Sources */,
-				03BF35D71F9E411300133674 /* ViewController.swift in Sources */,
+				03BF35D71F9E411300133674 /* LoginViewController.swift in Sources */,
 				03BF35D51F9E411300133674 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

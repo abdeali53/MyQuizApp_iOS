@@ -37,6 +37,8 @@ class LoginViewModel : ILogin{
     }
     // To check IsRemeber is true
     func checkIsRememberCredential() -> Bool {
+        var abc = readPlist()
+        print(abc)
         if let rememberCredential = UserDefaults.standard.value(forKey: "isRememberCredential"){
             isRememberCredential = rememberCredential as! Bool
         }
@@ -54,10 +56,10 @@ class LoginViewModel : ILogin{
         UserDefaults.standard.set(loginInfo.isRememberCredential, forKey: "isRememberCredential")
     }
     //Read Data From PList
-    func readPlist() -> NSDictionary {
-        var bundle = Bundle.main.path(forResource: "QuizInfo", ofType: "plist")
-        var dict = NSDictionary(contentsOfFile: bundle!)
-        return dict!
+    func readPlist() -> String {
+        var bundle = Bundle.main.path(forResource: "sa", ofType: "plist")
+        var dict = NSMutableArray(contentsOfFile: bundle!)
+        return (dict?.description)!
     }
     
 }

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var swRemember: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
+        var ques = QuestionnaireViewModel()
+        ques.loadQuestion()
         var login = LoginViewModel()
         swRemember.isOn = login.checkIsRememberCredential()
         if swRemember.isOn == true {
@@ -22,10 +24,7 @@ class ViewController: UIViewController {
             txtUsername.text = login.username
             txtPassword.text = login.password
         }
-        else{
-            login = login.loadLoginCredential(isRemember: false)
-            
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,12 +43,25 @@ class ViewController: UIViewController {
                 else{
                     login.removeCredentials(loginInfo: login)
                 }
+                navigate()
             }
             else{
-                let alert = UIAlertController(title: "Error Message", message: "Username or Password incorrect", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                Alert(title: "Error", message: "Username or Password is incorrect.")
             }
         }
+        else{
+            Alert(title: "Error", message: "Please enter login details.")
+        }
+    }
+}
+
+extension LoginViewController{
+    func Alert(title: String, message : String)  {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    self.present(alert, animated: true, completion: nil)
+    }
+    func navigate () {
+        self.performSegue(withIdentifier: "navigateToInstruction", sender: self)
     }
 }
