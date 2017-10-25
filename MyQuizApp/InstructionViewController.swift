@@ -10,9 +10,13 @@ import UIKit
 
 class InstructionViewController: UIViewController {
 
-    
+    @IBOutlet weak var lblTime: UILabel!
+    var seconds = 5 //This variable will hold a starting value of seconds. It could be any amount above 0.
+    var timer = Timer()
+    var isTimerRunning = false //This will be used to make sure only one timer is created at a time.
     override func viewDidLoad() {
         super.viewDidLoad()
+        runTimer()
 //lblQuestion.sizeToFit()
 //        lblQuestion.numberOfLines = 0
         
@@ -20,12 +24,7 @@ class InstructionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func bntoutside(_ sender: Any) {
-        print("sasa")
-    }
-    @IBAction func bntPressed(_ sender: UIButton) {
-        print(sender.tag)
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,5 +40,15 @@ class InstructionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(InstructionViewController.updateTimer)), userInfo: nil, repeats: true)
+        
+    }
+    @objc func updateTimer() {
+        seconds -= 1     //This will decrement(count down)the seconds.
+        if(seconds == 0){
+            print("dasda")
+        }
+        lblTime.text = String(seconds) //This will update the label.
+    }
 }

@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var swRemember: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var ques = QuestionnaireViewModel()
-        ques.loadQuestion()
+//        let ques = QuestionnaireViewModel()
+//        ques.loadQuestion()
         var login = LoginViewModel()
         swRemember.isOn = login.checkIsRememberCredential()
         if swRemember.isOn == true {

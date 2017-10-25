@@ -4,291 +4,150 @@
 <array>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>What is the name of the CalTech seismologist who invented the scale used to measure the magnitude of earthquakes?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Charles Richter</string>
+			<string>Giuseppe Mercalli</string>
+			<string>Joshua Rumble</string>
+			<string>Hiram Walker</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Charles Richter</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>Who invented the BALLPOINT PEN?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Biro Brothers</string>
+			<string> Bicc Brothers</string>
+			<string>Write Brothers</string>
+			<string>Waterman Brothers</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Biro Brothers</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>Who perfected GENETIC ENGINEERING?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Cohen &amp; Boyer</string>
+			<string>Hunt &amp; Davids</string>
+			<string>Sinclair &amp; Roberts</string>
+			<string>Jaysson &amp; Simons</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Cohen &amp; Boyer</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>What J. B. Dunlop invented?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Model airplanes</string>
+			<string>Pneumatic rubber tire</string>
+			<string>Automobile wheel rim</string>
+			<string>Rubber boot</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Pneumatic rubber tire</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>This part-time race car driver invented the bucket seat in 1969. Who was he?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>John Wayne</string>
+			<string>Steve McQueen</string>
+			<string>Harrison Frazier</string>
+			<string>Paul Newman</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string> Steve McQueen</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>Until Victorian times, chocolate was thought of as a drink. When did the first chocolate bar appear?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>1831</string>
+			<string>1828</string>
+			<string>There is no sure date</string>
+			<string>1825</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>There is no sure date</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>What James Watt invented?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Hot air balloon</string>
+			<string>Steam boat</string>
+			<string>Rotary steam engine</string>
+			<string>Diving bell</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Rotary steam engine</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>In which decade was the first solid state integrated circuit demonstrated?
+
+</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>1960s</string>
+			<string>1950s</string>
+			<string>1970s</string>
+			<string>1980s</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>1950s</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>What Benjamin Franklin invented?</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Hygrometer</string>
+			<string>Radio</string>
+			<string>Barometer</string>
+			<string>Bifocal spectacles</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Bifocal spectacles</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>This statesman, politican, scholar, inventor, and one of early presidents of USA invented the swivel chair, the spherical sundial, the moldboard plow, and the cipher wheel.</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>George Washington</string>
+			<string>Alexander Hamilton</string>
+			<string>John Adams</string>
+			<string>Thomas Jefferson</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Thomas Jefferson</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
+		<string>Which scientist discovered the radioactive element radium?
+
+</string>
 		<key>options</key>
 		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
+			<string>Isaac Newton</string>
+			<string>Albert Einstein</string>
+			<string>Marie Curie</string>
+			<string> Benjamin Franklin</string>
 		</array>
 		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
-	</dict>
-	<dict>
-		<key>questionText</key>
-		<string>What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?</string>
-		<key>options</key>
-		<array>
-			<string>Microwave oven</string>
-			<string>VCR</string>
-			<string>Remote control
-Remote control
-</string>
-			<string>Calculator</string>
-		</array>
-		<key>correctAnswer</key>
-		<string>Remote control
-</string>
+		<string>Marie Curie</string>
 	</dict>
 	<dict>
 		<key>questionText</key>
