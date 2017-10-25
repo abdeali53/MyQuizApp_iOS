@@ -8,8 +8,6 @@
 
 import Foundation
 class LoginViewModel : ILogin{
-    
-    
     var username: String
     var isRememberCredential : Bool = false
     var password: String

@@ -17,6 +17,7 @@
 		03BF35DF1F9E411300133674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BF35DD1F9E411300133674 /* LaunchScreen.storyboard */; };
 		03BF35EB1F9E5CB600133674 /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */; };
 		03BF35ED1F9E615A00133674 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BF35EC1F9E615A00133674 /* LoginViewModel.swift */; };
+		03DA07771FA043F600921D40 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */; };
 		9B7D9C2F1F9FDC5900A7DEC1 /* abc.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */; };
 		9B7D9C321F9FE16500A7DEC1 /* QuizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C311F9FE16500A7DEC1 /* QuizData.json */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		03BF35E01F9E411300133674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		03BF35EC1F9E615A00133674 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
 		9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = abc.plist; sourceTree = "<group>"; };
 		9B7D9C311F9FE16500A7DEC1 /* QuizData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				035718C51F9FAD9B0010CE36 /* QuizData.plist */,
 				9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */,
 				9B7D9C311F9FE16500A7DEC1 /* QuizData.json */,
+				03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */,
 			);
 			path = MyQuizApp;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				035718C81F9FB32F0010CE36 /* QuestionnaireViewModel.swift in Sources */,
 				031BBEC71F9F749800736CFE /* InstructionViewController.swift in Sources */,
 				03BF35ED1F9E615A00133674 /* LoginViewModel.swift in Sources */,
+				03DA07771FA043F600921D40 /* QuestionnaireViewController.swift in Sources */,
 				03BF35EB1F9E5CB600133674 /* LoginProtocol.swift in Sources */,
 				03BF35D71F9E411300133674 /* LoginViewController.swift in Sources */,
 				03BF35D51F9E411300133674 /* AppDelegate.swift in Sources */,
