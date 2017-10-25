@@ -72,7 +72,6 @@
 		03BF35D31F9E411300133674 /* MyQuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				9B9563871FA0E10600820521 /* Lib */,
 				03BF35E81F9E5C6900133674 /* Protocol */,
 				03BF35E61F9E5C3500133674 /* Model */,
 				03BF35D41F9E411300133674 /* AppDelegate.swift */,
@@ -106,13 +105,6 @@
 				03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		9B9563871FA0E10600820521 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

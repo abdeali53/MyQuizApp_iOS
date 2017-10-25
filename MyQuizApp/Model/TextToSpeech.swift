@@ -14,21 +14,23 @@ class TextToSpeech{
         var myUtterance = AVSpeechUtterance(string: "")
         myUtterance = AVSpeechUtterance(string: text)
         myUtterance.rate = 0.5
+        synth.stopSpeaking(at: .immediate)
         synth.speak(myUtterance)
     }
     static func stopSpeech(){
         let synth = AVSpeechSynthesizer()
+        synth.stopSpeaking(at: .immediate)
     }
    static func arrayToSpeech(options : [String])  {
         let synth = AVSpeechSynthesizer()
         var myUtterance = AVSpeechUtterance(string: "")
         var text : String = ""
         for i in 0..<options.count{
-            text += "Option \(i), \(options[i])"
+            text += "Option \(i+1), \(options[i])"
         }
         
         myUtterance = AVSpeechUtterance(string: text)
-        myUtterance.rate = 0.3
+        myUtterance.rate = 0.5
         synth.speak(myUtterance)
     }
 }

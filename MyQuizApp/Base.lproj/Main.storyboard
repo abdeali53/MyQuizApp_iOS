@@ -109,49 +109,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-Sz-UmR">
-                                <rect key="frame" x="30" y="406" width="354" height="167"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-VC-Y9W">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="27"/>
-                                        <color key="backgroundColor" red="0.97670762523437715" green="1" blue="0.98968728120525917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
-                                        </accessibility>
-                                        <state key="normal" title="Button"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="pXW-rH-UHe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-kv-yUi">
-                                        <rect key="frame" x="0.0" y="49" width="354" height="27"/>
-                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="MQB-mf-fFH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-ao-C6H">
-                                        <rect key="frame" x="0.0" y="98" width="354" height="26.666666666666629"/>
-                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="WUS-61-489"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-wH-kvL">
-                                        <rect key="frame" x="0.0" y="146.66666666666663" width="354" height="20.333333333333371"/>
-                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="RrE-2q-OJ3"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-rj-tSg">
                                 <rect key="frame" x="0.0" y="80" width="414" height="234"/>
                                 <subviews>
@@ -262,6 +219,49 @@
                                     <action selector="btnLogout:" destination="OVi-WZ-58E" eventType="touchUpInside" id="2da-2G-1on"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-Sz-UmR">
+                                <rect key="frame" x="30" y="377" width="354" height="167"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-VC-Y9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="25.333333333333314"/>
+                                        <color key="backgroundColor" red="0.97670762523437715" green="1" blue="0.98968728120525917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" allowsDirectInteraction="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="pXW-rH-UHe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-kv-yUi">
+                                        <rect key="frame" x="0.0" y="47.333333333333314" width="354" height="25.333333333333371"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="MQB-mf-fFH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zw-ao-C6H">
+                                        <rect key="frame" x="0.0" y="94.666666666666686" width="354" height="24.999999999999943"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="WUS-61-489"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-wH-kvL">
+                                        <rect key="frame" x="0.0" y="141.66666666666663" width="354" height="25.333333333333371"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="btnAnswer:" destination="OVi-WZ-58E" eventType="touchUpInside" id="RrE-2q-OJ3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93720608949999995" green="0.52548730369999996" blue="0.5411626101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

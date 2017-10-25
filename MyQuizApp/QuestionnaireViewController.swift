@@ -26,7 +26,7 @@ class QuestionnaireViewController: UIViewController {
     var pickedAnswer : String = ""
     var questionNumber : Int = 0
     var score : Int = 0
-    var isSoundOn : Bool = true
+    var isSoundOn : Bool = false
     
     
     override func viewDidLoad() {
@@ -35,7 +35,6 @@ class QuestionnaireViewController: UIViewController {
         btnOption2.layer.cornerRadius = 5
         btnOption3.layer.cornerRadius = 5
         btnOption4.layer.cornerRadius = 5
-        
         updateUI()
         // Do any additional setup after loading the view.
     }
@@ -60,81 +59,95 @@ class QuestionnaireViewController: UIViewController {
     }
     
     @IBAction func btnAnswer(_ sender: UIButton) {
-       pickedAnswer = (sender.titleLabel?.text)!
-        bntOption1.backgroundColor = UIColor.white
-        btnOption2.backgroundColor = UIColor.white
-        btnOption3.backgroundColor = UIColor.white
-        btnOption4.backgroundColor = UIColor.white
+        pickedAnswer = (sender.titleLabel?.text)!
+        self.initialiseButtonColor()
         sender.backgroundColor = UIColor.yellow
-        
     }
     
-    
-    
+   
     @IBAction func btnNextQuestion(_ sender: UIButton) {
         checkAnswer()
-        
-        questionNumber = questionNumber + 1
-        
-        updateUI()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.initialiseButtonColor()
+            self.questionNumber = self.questionNumber + 1
+            self.updateUI()
+        })
     }
     
     @IBAction func btnTurnOnOffSound(_ sender: UIButton) {
+        isSoundOn = !isSoundOn
     }
 
     
     
     func updateUI() {
-        
         progressBar.frame.size.width = (view.frame.size.width / 10) * CGFloat(questionNumber)
-        
         progressLabel.text = String(questionNumber) + "/10"
-        
-        scoreLabel.text = "Score: " + String(score)
-        
         nextQuestion()
     }
     func nextQuestion() {
-        
         if questionNumber < 10 {
+           // TextToSpeech.stopSpeech()
             lblQuestionNo.text = "Question No \(self.questionNumber+1)"
             lblQuestionText.text = questionnaire[questionNumber].questionText
             bntOption1.setTitle(questionnaire[questionNumber].options[0], for: .normal)
             btnOption2.setTitle(questionnaire[questionNumber].options[1], for: .normal)
             btnOption3.setTitle(questionnaire[questionNumber].options[2], for: .normal)
             btnOption4.setTitle(questionnaire[questionNumber].options[3], for: .normal)
+            if(isSoundOn){
             TextToSpeech.textToSpeecg(text: questionnaire[questionNumber].questionText)
             TextToSpeech.arrayToSpeech(options: questionnaire[questionNumber].options)
+            }
             
         }
-//        else {
-//            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
-//
-//            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { UIAlertAction in
-//                self.startOver()
-//            })
-//
-//            alert.addAction(restartAction)
-//
-//            present(alert, animated: true, completion: nil)
-//        }
+        else {
+            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
+
+            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { UIAlertAction in
+                self.startOver()
+            })
+
+            alert.addAction(restartAction)
+
+            present(alert, animated: true, completion: nil)
+        }
         
     }
     //This method will check if the user has got the right answer.
-    func checkAnswer() {
+    func checkAnswer()  {
         
         let correctAnswer = questionnaire[questionNumber].correctAnswer
         
         if correctAnswer == pickedAnswer {
-            
-            //ProgressHUD.showSuccess("Correct!")
-            
+            if (bntOption1.titleLabel?.text == correctAnswer){
+                bntOption1.backgroundColor = UIColor.green
+            }
+            else if (btnOption2.titleLabel?.text == correctAnswer){
+                btnOption2.backgroundColor = UIColor.green
+            }
+            else if (btnOption3.titleLabel?.text == correctAnswer){
+                btnOption3.backgroundColor = UIColor.green
+            }
+            else if (btnOption4.titleLabel?.text == correctAnswer){
+                btnOption4.backgroundColor = UIColor.green
+            }
             score = score + 1
         }
         else {
-            
-           // ProgressHUD.showError("Wrong!")
+            if (bntOption1.titleLabel?.text == pickedAnswer){
+                bntOption1.backgroundColor = UIColor.red
+            }
+            else if (btnOption2.titleLabel?.text == pickedAnswer){
+                btnOption2.backgroundColor = UIColor.red
+            }
+            else if (btnOption3.titleLabel?.text == pickedAnswer){
+                btnOption3.backgroundColor = UIColor.red
+            }
+            else if (btnOption4.titleLabel?.text == pickedAnswer){
+                btnOption4.backgroundColor = UIColor.red
+            }
         }
+        scoreLabel.text = "Score: " + String(score)
     }
     
     //This method will wipe the board clean, so that users can retake the quiz.
@@ -145,6 +158,12 @@ class QuestionnaireViewController: UIViewController {
         
         updateUI()
         
+    }
+    func initialiseButtonColor()  {
+        bntOption1.backgroundColor = UIColor.white
+        btnOption2.backgroundColor = UIColor.white
+        btnOption3.backgroundColor = UIColor.white
+        btnOption4.backgroundColor = UIColor.white
     }
     
     
