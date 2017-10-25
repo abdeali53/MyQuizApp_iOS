@@ -20,6 +20,7 @@
 		03DA07771FA043F600921D40 /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */; };
 		9B7D9C2F1F9FDC5900A7DEC1 /* abc.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */; };
 		9B7D9C321F9FE16500A7DEC1 /* QuizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C311F9FE16500A7DEC1 /* QuizData.json */; };
+		9B9563891FA0F96C00820521 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9563881FA0F96C00820521 /* TextToSpeech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
 		9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = abc.plist; sourceTree = "<group>"; };
 		9B7D9C311F9FE16500A7DEC1 /* QuizData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizData.json; sourceTree = "<group>"; };
+		9B9563881FA0F96C00820521 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		03BF35D31F9E411300133674 /* MyQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				9B9563871FA0E10600820521 /* Lib */,
 				03BF35E81F9E5C6900133674 /* Protocol */,
 				03BF35E61F9E5C3500133674 /* Model */,
 				03BF35D41F9E411300133674 /* AppDelegate.swift */,
@@ -92,6 +95,7 @@
 			children = (
 				03BF35EC1F9E615A00133674 /* LoginViewModel.swift */,
 				035718C71F9FB32F0010CE36 /* QuestionnaireViewModel.swift */,
+				9B9563881FA0F96C00820521 /* TextToSpeech.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +106,13 @@
 				03BF35EA1F9E5CB600133674 /* LoginProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9B9563871FA0E10600820521 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				03BF35ED1F9E615A00133674 /* LoginViewModel.swift in Sources */,
 				03DA07771FA043F600921D40 /* QuestionnaireViewController.swift in Sources */,
 				03BF35EB1F9E5CB600133674 /* LoginProtocol.swift in Sources */,
+				9B9563891FA0F96C00820521 /* TextToSpeech.swift in Sources */,
 				03BF35D71F9E411300133674 /* LoginViewController.swift in Sources */,
 				03BF35D51F9E411300133674 /* AppDelegate.swift in Sources */,
 			);

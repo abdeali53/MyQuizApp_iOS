@@ -21,7 +21,7 @@ class QuestionnaireViewModel {
         let listQuizData = NSMutableArray(contentsOfFile: bundle!)
         var count = 0
         for value in (listQuizData?.shuffled())! {
-            if(count < 3){
+            if(count < 10){
             let  ques = QuestionnaireViewModel()
                 ques.correctAnswer = (value as! NSDictionary).value(forKey: "correctAnswer") as! String
                 ques.options = (value as! NSDictionary).value(forKey: "options") as! [String]

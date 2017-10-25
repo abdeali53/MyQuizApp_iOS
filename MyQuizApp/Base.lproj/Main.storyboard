@@ -109,8 +109,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-Sz-UmR">
-                                <rect key="frame" x="30" y="353" width="354" height="167"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ix2-Sz-UmR">
+                                <rect key="frame" x="30" y="406" width="354" height="167"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-VC-Y9W">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="27"/>
@@ -179,11 +179,11 @@
                                     <constraint firstItem="wJ7-nI-l2A" firstAttribute="top" secondItem="Aix-rj-tSg" secondAttribute="top" constant="88" id="rwt-kG-BoU"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcA-XX-vwI">
-                                <rect key="frame" x="10" y="631" width="394" height="75"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcA-XX-vwI">
+                                <rect key="frame" x="10" y="643" width="394" height="73"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfq-UJ-cR9">
-                                        <rect key="frame" x="8" y="20" width="375" height="47"/>
+                                        <rect key="frame" x="8" y="18" width="375" height="47"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSa-uK-LaK">
                                                 <rect key="frame" x="0.0" y="33" width="24" height="14"/>
@@ -234,32 +234,73 @@
                                     <constraint firstItem="rfq-UJ-cR9" firstAttribute="bottom" secondItem="VcA-XX-vwI" secondAttribute="bottomMargin" id="qwi-Lq-820"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSk-eg-RHF">
+                                <rect key="frame" x="283" y="608" width="77" height="30"/>
+                                <color key="backgroundColor" red="0.64939820228030898" green="0.95523786544799805" blue="0.41525189029124449" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNextQuestion:" destination="OVi-WZ-58E" eventType="touchUpInside" id="7VD-4Q-ota"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFz-jX-2Dy">
+                                <rect key="frame" x="348" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="ic_speaker_notes"/>
+                                <connections>
+                                    <action selector="btnTurnOnOffSound:" destination="OVi-WZ-58E" eventType="touchUpInside" id="Mst-gO-RFG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-8M-7Yk">
+                                <rect key="frame" x="20" y="20" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogout:" destination="OVi-WZ-58E" eventType="touchUpInside" id="2da-2G-1on"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.49902438929999998" blue="0.52888532759999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.93720608949999995" green="0.52548730369999996" blue="0.5411626101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fPd-9x-3jg" firstAttribute="trailing" secondItem="Ix2-Sz-UmR" secondAttribute="trailing" constant="30" id="1a0-Ta-P4k"/>
                             <constraint firstItem="fPd-9x-3jg" firstAttribute="bottom" secondItem="Ix2-Sz-UmR" secondAttribute="bottom" constant="163" id="8MC-NV-zQB"/>
                             <constraint firstItem="fPd-9x-3jg" firstAttribute="bottom" secondItem="Aix-rj-tSg" secondAttribute="bottom" constant="422" id="9B8-We-y5h"/>
                             <constraint firstAttribute="trailing" secondItem="Aix-rj-tSg" secondAttribute="trailing" id="BZU-tQ-Xj6"/>
+                            <constraint firstItem="fPd-9x-3jg" firstAttribute="trailing" secondItem="TSk-eg-RHF" secondAttribute="trailing" constant="54" id="McB-Sm-5m4"/>
+                            <constraint firstItem="TSk-eg-RHF" firstAttribute="leading" secondItem="fPd-9x-3jg" secondAttribute="leading" constant="283" id="Tf9-Ul-MSF"/>
                             <constraint firstItem="Aix-rj-tSg" firstAttribute="top" secondItem="fPd-9x-3jg" secondAttribute="top" constant="60" id="VxW-KP-Geb"/>
                             <constraint firstItem="fPd-9x-3jg" firstAttribute="trailing" secondItem="VcA-XX-vwI" secondAttribute="trailing" constant="10" id="ZW4-12-rCx"/>
                             <constraint firstItem="Aix-rj-tSg" firstAttribute="leading" secondItem="ymW-Zf-nwi" secondAttribute="leading" id="bTe-LY-qjC"/>
                             <constraint firstItem="Ix2-Sz-UmR" firstAttribute="leading" secondItem="fPd-9x-3jg" secondAttribute="leading" constant="30" id="cfi-FX-Ul5"/>
                             <constraint firstItem="VcA-XX-vwI" firstAttribute="leading" secondItem="fPd-9x-3jg" secondAttribute="leading" constant="10" id="cma-us-Tfm"/>
                             <constraint firstItem="Ix2-Sz-UmR" firstAttribute="top" secondItem="Aix-rj-tSg" secondAttribute="bottom" constant="92" id="f1C-op-IMJ"/>
+                            <constraint firstItem="TSk-eg-RHF" firstAttribute="top" secondItem="Ix2-Sz-UmR" secondAttribute="bottom" constant="35" id="f8Z-hf-aDW"/>
+                            <constraint firstItem="VcA-XX-vwI" firstAttribute="top" secondItem="Ix2-Sz-UmR" secondAttribute="bottom" constant="70" id="jPw-z3-t7j"/>
                             <constraint firstAttribute="bottom" secondItem="VcA-XX-vwI" secondAttribute="bottom" constant="20" symbolic="YES" id="jTa-r4-bIh"/>
-                            <constraint firstItem="VcA-XX-vwI" firstAttribute="top" secondItem="Ix2-Sz-UmR" secondAttribute="bottom" constant="68" id="y9r-bP-Dw2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fPd-9x-3jg"/>
                     </view>
                     <connections>
+                        <outlet property="bntOption1" destination="Uge-VC-Y9W" id="xza-gY-y9q"/>
+                        <outlet property="btnOption2" destination="8Sk-kv-yUi" id="DHP-Qd-knE"/>
+                        <outlet property="btnOption3" destination="7Zw-ao-C6H" id="wlI-cI-9mi"/>
+                        <outlet property="btnOption4" destination="ymi-wH-kvL" id="NiB-k0-3gH"/>
                         <outlet property="lblQuestionNo" destination="MXq-ng-LSP" id="Wh2-cX-0Up"/>
                         <outlet property="lblQuestionText" destination="wJ7-nI-l2A" id="GbT-Nq-rbs"/>
+                        <outlet property="progressBar" destination="bSa-uK-LaK" id="l2E-jw-uyT"/>
+                        <outlet property="progressLabel" destination="XOp-8O-Vq0" id="m8c-6W-3y1"/>
+                        <outlet property="scoreLabel" destination="EjT-F5-rJ1" id="FXQ-4i-1fM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hx-4c-fki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="-1004"/>
+            <point key="canvasLocation" x="-646.37681159420299" y="-1004.3478260869566"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_speaker_notes" width="24" height="24"/>
+    </resources>
 </document>
