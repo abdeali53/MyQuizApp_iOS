@@ -10,7 +10,16 @@ import UIKit
 
 class QuestionnaireViewController: UIViewController {
 
-    @IBOutlet weak var btnOption: UIButton!
+    
+    @IBOutlet weak var lblQuestionNo: UILabel!
+    @IBOutlet weak var lblQuestionText: UILabel!
+    
+    let questionnaire = QuestionnaireViewModel().loadQuestion()
+    var pickedAnswer : String = ""
+    var questionNumber : Int = 0
+    var score : Int = 0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,5 +41,28 @@ class QuestionnaireViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func btnAnswer(_ sender: UIButton) {
+        
+    }
+    
+    func nextQuestion() {
+        
+        if questionNumber <= 10 {
+            lblQuestionText.text = questionnaire[questionNumber].questionText
+        }
+//        else {
+//            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
+//
+//            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { UIAlertAction in
+//                self.startOver()
+//            })
+//
+//            alert.addAction(restartAction)
+//
+//            present(alert, animated: true, completion: nil)
+//        }
+        
+    }
+    
+    
 }

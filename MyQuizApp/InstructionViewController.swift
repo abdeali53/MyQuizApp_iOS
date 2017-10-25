@@ -51,4 +51,10 @@ class InstructionViewController: UIViewController {
         }
         lblTime.text = String(seconds) //This will update the label.
     }
+    
+    @IBAction func btnStart(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "navigateToQuestionnaire", sender: self)
+        
+    }
+    
 }
