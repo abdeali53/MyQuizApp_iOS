@@ -20,7 +20,12 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var btnOption2: UIButton!
     @IBOutlet weak var btnOption3: UIButton!
     @IBOutlet weak var bntOption1: UIButton!
+    @IBOutlet weak var lblTime: UILabel!
     
+    
+    var seconds = 10
+    var timer = Timer()
+    var isTimerRunning = false
     
     let questionnaire = QuestionnaireViewModel().loadQuestion()
     var pickedAnswer : String = ""
@@ -31,6 +36,7 @@ class QuestionnaireViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        runTimer()
         bntOption1.layer.cornerRadius = 5
         btnOption2.layer.cornerRadius = 5
         btnOption3.layer.cornerRadius = 5
@@ -82,15 +88,24 @@ class QuestionnaireViewController: UIViewController {
     }
     
     @IBAction func btnNextQuestion(_ sender: UIButton) {
-        checkAnswer()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            self.initialiseButtonColor()
-            self.questionNumber = self.questionNumber + 1
-            self.updateUI()
-        })
+       goToNextQuestion()
     }
     
-   
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(QuestionnaireViewController.updateTimer)), userInfo: nil, repeats: true)
+        
+    }
+    @objc func updateTimer() {
+        seconds -= 1
+        if(seconds == 0){
+            goToNextQuestion()
+        }
+        else if(seconds < 0){
+            lblTime.text = ""
+        }
+        lblTime.text = "Timer: " + String(seconds) + "sec"
+    }
+    
 
     
     
@@ -166,18 +181,25 @@ class QuestionnaireViewController: UIViewController {
     
     //This method will wipe the board clean, so that users can retake the quiz.
     func startOver() {
-        
         questionNumber = 0
         score = 0
-        
         updateUI()
-        
     }
+    
     func initialiseButtonColor()  {
         bntOption1.backgroundColor = UIColor.white
         btnOption2.backgroundColor = UIColor.white
         btnOption3.backgroundColor = UIColor.white
         btnOption4.backgroundColor = UIColor.white
+    }
+    func goToNextQuestion() {
+        seconds = 10
+        checkAnswer()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.initialiseButtonColor()
+            self.questionNumber = self.questionNumber + 1
+            self.updateUI()
+        })
     }
     
     

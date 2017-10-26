@@ -147,6 +147,13 @@
                                         <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer: 10 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="No9-tQ-96w">
+                                        <rect key="frame" x="304" y="0.0" width="102" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.51840394735336304" green="0.76526439189910889" blue="0.33390149474143982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.49902438929999998" blue="0.52888532759999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -299,6 +306,7 @@
                         <outlet property="btnOption4" destination="ymi-wH-kvL" id="NiB-k0-3gH"/>
                         <outlet property="lblQuestionNo" destination="MXq-ng-LSP" id="Wh2-cX-0Up"/>
                         <outlet property="lblQuestionText" destination="wJ7-nI-l2A" id="GbT-Nq-rbs"/>
+                        <outlet property="lblTime" destination="No9-tQ-96w" id="upx-R3-j4n"/>
                         <outlet property="progressBar" destination="bSa-uK-LaK" id="l2E-jw-uyT"/>
                         <outlet property="progressLabel" destination="XOp-8O-Vq0" id="m8c-6W-3y1"/>
                         <outlet property="scoreLabel" destination="EjT-F5-rJ1" id="FXQ-4i-1fM"/>
