@@ -54,7 +54,8 @@ class QuestionnaireViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func btnLogout(_ sender: UIButton) {
+   
+    @IBAction func btnLogout(_ sender: UIBarButtonItem) {
         
     }
     
@@ -64,7 +65,22 @@ class QuestionnaireViewController: UIViewController {
         sender.backgroundColor = UIColor.yellow
     }
     
-   
+    @IBAction func btnTurnOnOff(_ sender: UIBarButtonItem) {
+        isSoundOn = !isSoundOn
+        if(isSoundOn){
+            let img = UIImage(named: "ic_volume_up")
+            sender.image = img
+        }
+        else{
+            let img = UIImage(named: "ic_volume_off")
+            sender.image = img
+            
+        }
+
+        
+       
+    }
+    
     @IBAction func btnNextQuestion(_ sender: UIButton) {
         checkAnswer()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -74,9 +90,7 @@ class QuestionnaireViewController: UIViewController {
         })
     }
     
-    @IBAction func btnTurnOnOffSound(_ sender: UIButton) {
-        isSoundOn = !isSoundOn
-    }
+   
 
     
     
