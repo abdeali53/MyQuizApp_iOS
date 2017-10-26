@@ -175,11 +175,24 @@ class QuestionnaireViewController: UIViewController {
             else if (btnOption4.titleLabel?.text == pickedAnswer){
                 btnOption4.backgroundColor = UIColor.red
             }
+            
+        }
+        if (bntOption1.titleLabel?.text == correctAnswer){
+            bntOption1.backgroundColor = UIColor.green
+        }
+        else if (btnOption2.titleLabel?.text == correctAnswer){
+            btnOption2.backgroundColor = UIColor.green
+        }
+        else if (btnOption3.titleLabel?.text == correctAnswer){
+            btnOption3.backgroundColor = UIColor.green
+        }
+        else if (btnOption4.titleLabel?.text == correctAnswer){
+            btnOption4.backgroundColor = UIColor.green
         }
         scoreLabel.text = "Score: " + String(score)
     }
     
-    //This method will wipe the board clean, so that users can retake the quiz.
+
     func startOver() {
         questionNumber = 0
         score = 0
@@ -193,14 +206,12 @@ class QuestionnaireViewController: UIViewController {
         btnOption4.backgroundColor = UIColor.white
     }
     func goToNextQuestion() {
-        seconds = 10
         checkAnswer()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            self.seconds = 10
             self.initialiseButtonColor()
             self.questionNumber = self.questionNumber + 1
             self.updateUI()
         })
-    }
-    
-    
+    }    
 }
