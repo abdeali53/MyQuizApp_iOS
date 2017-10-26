@@ -22,16 +22,17 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var bntOption1: UIButton!
     @IBOutlet weak var lblTime: UILabel!
     
+    @IBOutlet weak var btnNext: UIButton!
     
-    var seconds = 10
+    var seconds = 30
     var timer = Timer()
-    var isTimerRunning = false
+    var isTimerRunning = true
     
     let questionnaire = QuestionnaireViewModel().loadQuestion()
     var pickedAnswer : String = ""
     var questionNumber : Int = 0
     var score : Int = 0
-    var isSoundOn : Bool = false
+    var isSoundOn : Bool = true
     
     
     override func viewDidLoad() {
@@ -41,7 +42,8 @@ class QuestionnaireViewController: UIViewController {
         btnOption2.layer.cornerRadius = 5
         btnOption3.layer.cornerRadius = 5
         btnOption4.layer.cornerRadius = 5
-        updateUI()
+        lblTime.text = "0"
+        nextQuestion()
         // Do any additional setup after loading the view.
     }
 
@@ -80,11 +82,7 @@ class QuestionnaireViewController: UIViewController {
         else{
             let img = UIImage(named: "ic_volume_off")
             sender.image = img
-            
         }
-
-        
-       
     }
     
     @IBAction func btnNextQuestion(_ sender: UIButton) {
@@ -106,16 +104,11 @@ class QuestionnaireViewController: UIViewController {
         lblTime.text = "Timer: " + String(seconds) + "sec"
     }
     
-
-    
-    
-    func updateUI() {
-        progressBar.frame.size.width = (view.frame.size.width / 10) * CGFloat(questionNumber)
-        progressLabel.text = String(questionNumber) + "/10"
-        nextQuestion()
-    }
     func nextQuestion() {
+        TextToSpeech.synth.stopSpeaking(at: .immediate)
         if questionNumber < 10 {
+            progressBar.frame.size.width = (view.frame.size.width / 10) * CGFloat(questionNumber)
+            progressLabel.text = String(questionNumber) + "/10"
            // TextToSpeech.stopSpeech()
             lblQuestionNo.text = "Question No \(self.questionNumber+1)"
             lblQuestionText.text = questionnaire[questionNumber].questionText
@@ -127,10 +120,10 @@ class QuestionnaireViewController: UIViewController {
             TextToSpeech.textToSpeecg(text: questionnaire[questionNumber].questionText)
             TextToSpeech.arrayToSpeech(options: questionnaire[questionNumber].options)
             }
-            
+           
         }
         else {
-            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions, do you want to start over?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Result", message: "Your score is \(self.score). Do you want to start over?", preferredStyle: .alert)
 
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { UIAlertAction in
                 self.startOver()
@@ -144,9 +137,8 @@ class QuestionnaireViewController: UIViewController {
     }
     //This method will check if the user has got the right answer.
     func checkAnswer()  {
-        
+        if(questionNumber < 10){
         let correctAnswer = questionnaire[questionNumber].correctAnswer
-        
         if correctAnswer == pickedAnswer {
             if (bntOption1.titleLabel?.text == correctAnswer){
                 bntOption1.backgroundColor = UIColor.green
@@ -190,13 +182,15 @@ class QuestionnaireViewController: UIViewController {
             btnOption4.backgroundColor = UIColor.green
         }
         scoreLabel.text = "Score: " + String(score)
+        }
     }
     
 
     func startOver() {
         questionNumber = 0
         score = 0
-        updateUI()
+        nextQuestion()
+        
     }
     
     func initialiseButtonColor()  {
@@ -206,12 +200,16 @@ class QuestionnaireViewController: UIViewController {
         btnOption4.backgroundColor = UIColor.white
     }
     func goToNextQuestion() {
-        checkAnswer()
+        self.checkAnswer()
+        self.seconds = 31
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-            self.seconds = 10
             self.initialiseButtonColor()
             self.questionNumber = self.questionNumber + 1
-            self.updateUI()
+            self.nextQuestion()
+            if(self.questionNumber == 9){
+                self.btnNext.titleLabel?.text = "Finish"
+            }
+            
         })
     }    
 }
