@@ -21,9 +21,8 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var btnOption3: UIButton!
     @IBOutlet weak var bntOption1: UIButton!
     @IBOutlet weak var lblTime: UILabel!
-    
     @IBOutlet weak var btnNext: UIButton!
-    
+    @IBOutlet weak var lblHighScore: UILabel!
     var seconds = 30
     var timer = Timer()
     var isTimerRunning = true
@@ -35,9 +34,11 @@ class QuestionnaireViewController: UIViewController {
     var isSoundOn : Bool = true
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         runTimer()
+        lblHighScore.text = "High Score" + String(MyResultViewModel.highScore())
         bntOption1.layer.cornerRadius = 5
         btnOption2.layer.cornerRadius = 5
         btnOption3.layer.cornerRadius = 5
@@ -130,7 +131,7 @@ class QuestionnaireViewController: UIViewController {
             })
 
             alert.addAction(restartAction)
-
+            MyResultViewModel.addScore(score: self.score)
             present(alert, animated: true, completion: nil)
         }
         

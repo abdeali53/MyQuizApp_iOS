@@ -154,6 +154,13 @@
                                         <color key="textColor" red="0.51840394735336304" green="0.76526439189910889" blue="0.33390149474143982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Score : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDm-Ow-oV3">
+                                        <rect key="frame" x="8" y="0.0" width="118" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.49902438929999998" blue="0.52888532759999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -305,6 +312,7 @@
                         <outlet property="btnOption2" destination="8Sk-kv-yUi" id="DHP-Qd-knE"/>
                         <outlet property="btnOption3" destination="7Zw-ao-C6H" id="wlI-cI-9mi"/>
                         <outlet property="btnOption4" destination="ymi-wH-kvL" id="NiB-k0-3gH"/>
+                        <outlet property="lblHighScore" destination="pDm-Ow-oV3" id="Szh-CO-l10"/>
                         <outlet property="lblQuestionNo" destination="MXq-ng-LSP" id="Wh2-cX-0Up"/>
                         <outlet property="lblQuestionText" destination="wJ7-nI-l2A" id="GbT-Nq-rbs"/>
                         <outlet property="lblTime" destination="No9-tQ-96w" id="upx-R3-j4n"/>
