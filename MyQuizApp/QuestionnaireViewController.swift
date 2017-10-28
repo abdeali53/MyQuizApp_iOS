@@ -31,14 +31,16 @@ class QuestionnaireViewController: UIViewController {
     var pickedAnswer : String = ""
     var questionNumber : Int = 0
     var score : Int = 0
-    var isSoundOn : Bool = true
+    var isSoundOn : Bool = false
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         runTimer()
-        lblHighScore.text = "High Score" + String(MyResultViewModel.highScore())
+        lblHighScore.text = "High Score: " + String(MyResultViewModel.highScore())
+        self.questionNumber = 0
+        self.score = 0
         bntOption1.layer.cornerRadius = 5
         btnOption2.layer.cornerRadius = 5
         btnOption3.layer.cornerRadius = 5
@@ -188,9 +190,10 @@ class QuestionnaireViewController: UIViewController {
     
 
     func startOver() {
-        questionNumber = 0
-        score = 0
-        nextQuestion()
+        self.viewDidLoad()
+      //  questionNumber = 0
+        ///score = 0
+        //nextQuestion()
         
     }
     
