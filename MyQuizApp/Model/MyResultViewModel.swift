@@ -11,6 +11,7 @@ import Foundation
 class MyResultViewModel{
     var attemptNumber : Int!
     var score : Int!
+    var attemptDate : Date = Date()
     init(){
     }
     
