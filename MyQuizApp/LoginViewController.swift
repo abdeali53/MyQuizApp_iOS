@@ -62,6 +62,6 @@ extension LoginViewController{
     self.present(alert, animated: true, completion: nil)
     }
     func navigate () {
-        self.performSegue(withIdentifier: "navigateToInstruction", sender: self)
+        self.performSegue(withIdentifier: "navigateToHome", sender: self)
     }
 }

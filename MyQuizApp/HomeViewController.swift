@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InstructionViewController: UIViewController {
+class HomeViewController: UIViewController {
 
    
     var timer = Timer()
@@ -43,10 +43,16 @@ class InstructionViewController: UIViewController {
     }
     */
     
+    @IBAction func btnInstruction_Click(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "navigateToQuiz", sender: self)
+    }
     
     @IBAction func btnStart(_ sender: UIButton) {
         self.performSegue(withIdentifier: "navigateToQuiz", sender: self)
         
     }
     
+    @IBAction func logout_click(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "navigateToScoreboard", sender: self)
+    }
 }
