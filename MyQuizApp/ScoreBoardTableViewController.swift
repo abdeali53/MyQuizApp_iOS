@@ -13,10 +13,13 @@ class ScoreBoardTableViewController: UITableViewController {
     
     
     let scoreboard = MyResultViewModel.listOfResults()
-    
+    let highscore = MyResultViewModel.highScore()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let backgroundImage = #imageLiteral(resourceName: "640-Abstract-Backgrounds-Textures-l")
+        let imageView = UIImageView(image: backgroundImage)
+        self.tableView.backgroundView = imageView
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,8 +46,17 @@ class ScoreBoardTableViewController: UITableViewController {
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quizScoreboard", for: indexPath)
-            cell.textLabel?.text = "Score: \(scoreboard[indexPath.row].score)"
-            cell.detailTextLabel?.text = "sasa"
+            cell.textLabel?.text = "Score: \(scoreboard[indexPath.row].score!)"
+            cell.detailTextLabel?.text = "Date: \(scoreboard[indexPath.row].attemptDate)"
+            if(self.highscore == self.scoreboard[indexPath.row].score!){
+            cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+            }
+            else{
+            cell.backgroundColor = UIColor(white: 1, alpha: 0)
+            
+            }
+            cell.textLabel?.textColor =  #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            cell.detailTextLabel?.textColor =  #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         return cell
     }
    
@@ -93,5 +105,5 @@ class ScoreBoardTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

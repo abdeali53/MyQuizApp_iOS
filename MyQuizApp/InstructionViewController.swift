@@ -30,7 +30,7 @@ class InstructionViewController: UIViewController {
     }
     
     @IBAction func btnScoreboard_Click(_ sender: Any) {
-         
+         self.performSegue(withIdentifier: "navigateToScoreboard", sender: self)
     }
     
     /*

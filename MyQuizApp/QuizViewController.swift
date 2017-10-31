@@ -83,6 +83,10 @@ class QuizViewController: UIViewController {
             sender.image = img
         }
     }
+    
+    @IBAction func quit_Click(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "navigateToInstruction", sender: self)
+    }
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(QuestionnaireViewController.updateTimer)), userInfo: nil, repeats: true)
         

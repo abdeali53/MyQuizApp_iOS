@@ -22,9 +22,9 @@
 		9B33B8EA1FA3AC7800807AAF /* MyResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B33B8E91FA3AC7800807AAF /* MyResultViewModel.swift */; };
 		9B72AD551FA3FC58005443A0 /* QuizResult.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B72AD541FA3FC58005443A0 /* QuizResult.plist */; };
 		9B7C26BC1FA802CA00FC6C8F /* ScoreBoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7C26BB1FA802CA00FC6C8F /* ScoreBoardTableViewController.swift */; };
-		9B7D9C2F1F9FDC5900A7DEC1 /* abc.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */; };
 		9B7D9C321F9FE16500A7DEC1 /* QuizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B7D9C311F9FE16500A7DEC1 /* QuizData.json */; };
 		9B9563891FA0F96C00820521 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9563881FA0F96C00820521 /* TextToSpeech.swift */; };
+		BEB495E51FA8C320002CE23D /* Scoreboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEB495E41FA8C320002CE23D /* Scoreboard.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		9B33B8E91FA3AC7800807AAF /* MyResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResultViewModel.swift; sourceTree = "<group>"; };
 		9B72AD541FA3FC58005443A0 /* QuizResult.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = QuizResult.plist; sourceTree = "<group>"; };
 		9B7C26BB1FA802CA00FC6C8F /* ScoreBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardTableViewController.swift; sourceTree = "<group>"; };
-		9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = abc.plist; sourceTree = "<group>"; };
 		9B7D9C311F9FE16500A7DEC1 /* QuizData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuizData.json; sourceTree = "<group>"; };
 		9B9563881FA0F96C00820521 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		BEB495E41FA8C320002CE23D /* Scoreboard.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Scoreboard.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +90,12 @@
 				03BF35E01F9E411300133674 /* Info.plist */,
 				031BBEC61F9F749800736CFE /* InstructionViewController.swift */,
 				035718C51F9FAD9B0010CE36 /* QuizData.plist */,
-				9B7D9C2E1F9FDC5900A7DEC1 /* abc.plist */,
 				9B7D9C311F9FE16500A7DEC1 /* QuizData.json */,
 				03DA07761FA043F600921D40 /* QuestionnaireViewController.swift */,
 				9B72AD541FA3FC58005443A0 /* QuizResult.plist */,
 				034700F01FA58496003DB79D /* QuizViewController.swift */,
 				9B7C26BB1FA802CA00FC6C8F /* ScoreBoardTableViewController.swift */,
+				BEB495E41FA8C320002CE23D /* Scoreboard.plist */,
 			);
 			path = MyQuizApp;
 			sourceTree = "<group>";
@@ -179,11 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BF35DF1F9E411300133674 /* LaunchScreen.storyboard in Resources */,
-				9B7D9C2F1F9FDC5900A7DEC1 /* abc.plist in Resources */,
 				9B72AD551FA3FC58005443A0 /* QuizResult.plist in Resources */,
 				9B7D9C321F9FE16500A7DEC1 /* QuizData.json in Resources */,
 				03BF35DC1F9E411300133674 /* Assets.xcassets in Resources */,
 				03BF35DA1F9E411300133674 /* Main.storyboard in Resources */,
+				BEB495E51FA8C320002CE23D /* Scoreboard.plist in Resources */,
 				035718C61F9FAD9B0010CE36 /* QuizData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

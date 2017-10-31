@@ -19,12 +19,12 @@ class MyResultViewModel{
    var lstResult = [MyResultViewModel] ()
     var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as Array
     let documentPath = paths[0] as String
-    let path = documentPath.appending("QuizResult")
+    let path = documentPath.appending("Scoreboard")
     
     let fileManager = FileManager.default
     
     if !fileManager.fileExists(atPath: path) {
-        if let bundlePath = Bundle.main.path(forResource: "QuizResult", ofType: "plist") {
+        if let bundlePath = Bundle.main.path(forResource: "Scoreboard", ofType: "plist") {
             do {
                 try fileManager.copyItem(at: URL(fileURLWithPath: bundlePath), to: URL(fileURLWithPath: path))
             } catch {
@@ -38,7 +38,8 @@ class MyResultViewModel{
     else {
         print("file product plist already exist at path")
     }
-  let  listQuizResult = NSMutableArray(contentsOfFile: path)!
+    if (NSMutableArray(contentsOfFile: path) != nil){
+    let  listQuizResult = NSMutableArray(contentsOfFile: path)!
     
     
     
@@ -47,9 +48,11 @@ class MyResultViewModel{
                 let  result = MyResultViewModel()
                 result.attemptNumber = (value as! NSDictionary).value(forKey: "attemptNumber") as! Int
                 result.score = (value as! NSDictionary).value(forKey: "score") as! Int
+                result.attemptDate = (value as! NSDictionary).value(forKey: "attemptDate") as! Date
                 lstResult.append(result)
             }
         }
+    }
         return lstResult
     }
     
@@ -76,12 +79,12 @@ class MyResultViewModel{
         
         var paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as Array
         let documentPath = paths[0] as String
-        let path = documentPath.appending("QuizResult")
+        let path = documentPath.appending("Scoreboard")
         
         let fileManager = FileManager.default
         
         if !fileManager.fileExists(atPath: path) {
-            if let bundlePath = Bundle.main.path(forResource: "QuizResult", ofType: "plist") {
+            if let bundlePath = Bundle.main.path(forResource: "Scoreboard", ofType: "plist") {
                 array = NSMutableArray(contentsOfFile: bundlePath)!
                 do {
                     try fileManager.copyItem(at: URL(fileURLWithPath: bundlePath), to: URL(fileURLWithPath: path))
@@ -91,9 +94,9 @@ class MyResultViewModel{
                 
                 
                 let dictProduct = NSMutableDictionary()
-                dictProduct["attemptNumber"] = score
-                dictProduct["score"] = self.attempId()
-                
+                dictProduct["attemptNumber"] = self.attempId()
+                dictProduct["score"] = score
+                dictProduct["attemptDate"] = Date()
                 array.add(dictProduct)
                 array.write(toFile: path, atomically: true)
         
@@ -104,13 +107,13 @@ class MyResultViewModel{
         }
         else {
             print("file product plist already exist at path")
-            
+            if(NSMutableArray(contentsOfFile: path) != nil){
             array = NSMutableArray(contentsOfFile: path)!
-            
+            }
             let dictProduct = NSMutableDictionary()
-            dictProduct["attemptNumber"] = score
-            dictProduct["score"] = self.attempId()
-            
+            dictProduct["attemptNumber"] = self.attempId()
+            dictProduct["score"] = score
+            dictProduct["attemptDate"] = Date()
             array.add(dictProduct)
             array.write(toFile: path, atomically: true)
             
