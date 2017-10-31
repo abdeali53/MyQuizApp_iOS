@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     */
     
     @IBAction func btnInstruction_Click(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "navigateToQuiz", sender: self)
+        self.performSegue(withIdentifier: "navigateToInstruction", sender: self)
     }
     
     @IBAction func btnStart(_ sender: UIButton) {
@@ -53,6 +53,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func logout_click(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "navigateToScoreboard", sender: self)
+        self.performSegue(withIdentifier: "navigateToLogin", sender: self)
     }
 }

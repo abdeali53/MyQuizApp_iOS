@@ -93,7 +93,7 @@
         <!--Item 1-->
         <scene sceneID="kLM-iq-MhU">
             <objects>
-                <viewController id="sNu-Xv-TVL" sceneMemberID="viewController">
+                <viewController id="sNu-Xv-TVL" customClass="InstructionViewController" customModule="MyQuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8lm-nz-oiw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="Qzu-WW-gK9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="0FH-kl-cLI"/>
+                    <connections>
+                        <outlet property="webInstruction" destination="TGt-WC-gsp" id="v3O-ld-2SB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keK-qi-HHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,6 +170,7 @@
                                     <color key="titleColor" red="0.80958759784698486" green="0.50267720222473145" blue="0.3765999972820282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnInstruction_Click:" destination="7PK-KC-bPT" eventType="touchUpInside" id="Inb-ce-1FW"/>
                                     <segue destination="sNu-Xv-TVL" kind="show" identifier="navigateToInstruction" id="kqj-i8-EeU"/>
                                 </connections>
                             </button>
@@ -559,7 +563,6 @@
         <image name="ic_volume_up" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kqj-i8-EeU"/>
         <segue reference="mz3-rV-rNP"/>
     </inferredMetricsTieBreakers>
 </document>
