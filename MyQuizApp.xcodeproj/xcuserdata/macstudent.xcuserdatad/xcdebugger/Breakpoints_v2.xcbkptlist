@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyQuizApp/QuestionnaireViewController.swift"
-            timestampString = "531100888.734872"
+            timestampString = "531183045.966509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyQuizApp/QuestionnaireViewController.swift"
-            timestampString = "531100888.735446"
+            timestampString = "531183045.966559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyQuizApp/Model/MyResultViewModel.swift"
-            timestampString = "531100888.735829"
+            timestampString = "531181046.910876"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "addScore(score:)"
+            landmarkName = "attempId()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,13 +90,122 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyQuizApp/Model/MyResultViewModel.swift"
-            timestampString = "531100888.735867"
+            timestampString = "531181046.911252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
             endingLineNumber = "76"
-            landmarkName = "addScore(score:)"
+            landmarkName = "MyResultViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyQuizApp/ScoreBoardTableViewController.swift"
+            timestampString = "531189123.242814"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyQuizApp/ScoreBoardTableViewController.swift"
+            timestampString = "531189123.243164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ScoreBoardTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of MyQuizApp.ScoreBoardTableViewController.scoreboard : Swift.Array&lt;MyQuizApp.MyResultViewModel&gt;"
+                  moduleName = "MyQuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/MyQuizApp_iOS/MyQuizApp/ScoreBoardTableViewController.swift"
+                  timestampString = "531187209.520461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyQuizApp.ScoreBoardTableViewController.scoreboard.getter : Swift.Array&lt;MyQuizApp.MyResultViewModel&gt;"
+                  moduleName = "MyQuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/MyQuizApp_iOS/MyQuizApp/ScoreBoardTableViewController.swift"
+                  timestampString = "531187209.521733"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyQuizApp.ScoreBoardTableViewController.init(style: __C.UITableViewStyle) -&gt; MyQuizApp.ScoreBoardTableViewController"
+                  moduleName = "MyQuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/MyQuizApp_iOS/MyQuizApp/ScoreBoardTableViewController.swift"
+                  timestampString = "531187209.522925"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyQuizApp.ScoreBoardTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MyQuizApp.ScoreBoardTableViewController"
+                  moduleName = "MyQuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/MyQuizApp_iOS/MyQuizApp/ScoreBoardTableViewController.swift"
+                  timestampString = "531187209.52406"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyQuizApp.ScoreBoardTableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyQuizApp.ScoreBoardTableViewController&gt;"
+                  moduleName = "MyQuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macstudent/Desktop/MyQuizApp_iOS/MyQuizApp/ScoreBoardTableViewController.swift"
+                  timestampString = "531187209.525422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

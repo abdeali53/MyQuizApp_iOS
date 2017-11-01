@@ -27,6 +27,9 @@ class ScoreBoardTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func home_click(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "navigateToScoreboard", sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,8 +49,11 @@ class ScoreBoardTableViewController: UITableViewController {
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quizScoreboard", for: indexPath)
+            let dateFormatterGet = DateFormatter()
+            dateFormatterGet.dateFormat = "yyyy-MM-dd hh:mm:ss"
+            
             cell.textLabel?.text = "Score: \(scoreboard[indexPath.row].score!)"
-            cell.detailTextLabel?.text = "Date: \(scoreboard[indexPath.row].attemptDate)"
+            cell.detailTextLabel?.text = "Date: \(dateFormatterGet.string(from:  scoreboard[indexPath.row].attemptDate))"
             if(self.highscore == self.scoreboard[indexPath.row].score!){
             cell.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
             }

@@ -21,6 +21,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var btnSound: UIBarButtonItem!
     var seconds = 30
     var timer = Timer()
     var isTimerRunning = true
@@ -34,8 +35,10 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         runTimer()
         lblHIghScore.text = "High Score: " + String(MyResultViewModel.highScore())
+        lblScore.text = "Score: " + String(score)
         self.questionNumber = 0
         self.score = 0
+        self.btnTurnOn_Click(btnSound)
         btnOption1.layer.cornerRadius = 10
         btnOption2.layer.cornerRadius = 10
         btnOption3.layer.cornerRadius = 10
@@ -81,6 +84,7 @@ class QuizViewController: UIViewController {
         else{
             let img = UIImage(named: "ic_volume_off")
             sender.image = img
+            TextToSpeech.stopSpeech()
         }
     }
     
@@ -98,6 +102,13 @@ class QuizViewController: UIViewController {
         }
         else if(seconds < 0){
             lblTime.text = ""
+        }
+        else if(seconds < 5)
+        {
+            lblTime.textColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        }
+        else if(seconds > 5){
+            lblTime.textColor = #colorLiteral(red: 0.6074399948, green: 0.7690245509, blue: 0.01989133283, alpha: 1)
         }
         lblTime.text = "Timer: " + String(seconds) + "sec"
     }
@@ -206,7 +217,7 @@ class QuizViewController: UIViewController {
             self.questionNumber = self.questionNumber + 1
             self.nextQuestion()
             if(self.questionNumber == 9){
-                self.btnNext.titleLabel?.text = "Finish"
+                self.btnNext.titleLabel?.text = "End"
             }
             
         })

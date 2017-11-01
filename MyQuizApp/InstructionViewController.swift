@@ -13,7 +13,7 @@ class InstructionViewController: UIViewController {
     @IBOutlet weak var webInstruction: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadMyHeml()
         // Do any additional setup after loading the view.
     }
 
